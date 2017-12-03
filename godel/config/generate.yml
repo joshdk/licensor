@@ -1,0 +1,6 @@
+generators:
+  spdxgen:
+    go-generate-dir: .
+    gen-paths:
+      paths:
+        - "spdx/index.gen.go"
