@@ -14,4 +14,3 @@ type License struct {
 	Deprecated       bool     `json:"isDeprecatedLicenseId"`
 	OSIApproved      bool     `json:"isOsiApproved"`
 }
-
