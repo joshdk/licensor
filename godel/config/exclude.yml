@@ -4,3 +4,4 @@ names:
   - "vendor"
 paths:
   - "godel"
+  - "spdx/*.gen.go"

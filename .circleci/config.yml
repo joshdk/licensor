@@ -7,5 +7,6 @@ jobs:
     working_directory: /go/src/github.com/joshdk/license
     steps:
       - checkout
-      - run: ./godelw version
       - run: go get -u github.com/spdx/license-list-data || true
+      - run: ./godelw version
+      - run: ./godelw verify --apply=false

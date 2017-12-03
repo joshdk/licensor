@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "fHTNozph+xpsGMTGOTJwQXZI9mw=",
+			"path": "github.com/dave/jennifer/jen",
+			"revision": "97587ff16f680f25594335a26c03ef6a1b7311b7",
+			"revisionTime": "2017-10-04T02:51:00Z"
+		}
+	],
+	"rootPath": "github.com/joshdk/license"
+}
