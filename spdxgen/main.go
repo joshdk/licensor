@@ -128,13 +128,22 @@ func pkgDir(pkg string) (string, error) {
 	return filepath.Join(gopath, "src", pkg), nil
 }
 
-func generate(spdxDataPkg string, targetPkg string) error {
+func generate(spdxDataPkg string, targetPkg string, targetFilename string) error {
 
 	// Resolve SPDX license list data package to the correct directory
 	spdxDataPkgDir, err := pkgDir(spdxDataPkg)
 	if err != nil {
 		return err
 	}
+
+	// Resolve target package to the correct directory
+	targetPkgDir, err := pkgDir(targetPkg)
+	if err != nil {
+		return err
+	}
+
+	// Name of generated Go source file
+	targetFile := filepath.Join(targetPkgDir, targetFilename)
 
 	licenses := parse(read(find(spdxDataPkgDir)))
 
@@ -147,24 +156,23 @@ func generate(spdxDataPkg string, targetPkg string) error {
 	// Generate raw Go source file contents
 	rendered := Render(targetPkg, ls)
 
-	fmt.Printf("%s\n", rendered)
-
-	return nil
+	return ioutil.WriteFile(targetFile, []byte(rendered), 0644)
 }
 
 func main() {
 
 	err := func() error {
-		if len(os.Args) < 3 {
+		if len(os.Args) < 4 {
 			return errors.New("insufficient arguments")
 		}
 
 		var (
-			spdxDataPkg = os.Args[1]
-			targetPkg   = os.Args[2]
+			spdxDataPkg    = os.Args[1]
+			targetPkg      = os.Args[2]
+			targetFilename = os.Args[3]
 		)
 
-		return generate(spdxDataPkg, targetPkg)
+		return generate(spdxDataPkg, targetPkg, targetFilename)
 	}()
 
 	if err != nil {

@@ -8,6 +8,10 @@ import (
 	"github.com/dave/jennifer/jen"
 )
 
+var (
+	licenses []License
+)
+
 type License struct {
 	Name             string   `json:"name"`
 	Identifier       string   `json:"licenseId"`
