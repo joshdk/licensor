@@ -35,3 +35,7 @@ func (l *License) JenValue() *jen.Statement {
 		jen.Id("OSIApproved"):      jen.Lit(l.OSIApproved),
 	})
 }
+
+func All() []License {
+	return licenses
+}
