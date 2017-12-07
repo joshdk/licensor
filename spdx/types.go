@@ -19,8 +19,8 @@ type License struct {
 	OSIApproved      bool     `json:"isOsiApproved"`
 }
 
-func (l *License) JenValue() *jen.Statement {
-	return jen.Line().Values(jen.Dict{
+func (l *License) JenValue() jen.Dict {
+	return jen.Dict{
 		jen.Id("Name"):             jen.Lit(l.Name),
 		jen.Id("Identifier"):       jen.Lit(l.Identifier),
 		jen.Id("Text"):             jen.Lit(l.Text),
@@ -29,5 +29,5 @@ func (l *License) JenValue() *jen.Statement {
 		jen.Id("StandardHeader"):   jen.Lit(l.StandardHeader),
 		jen.Id("Deprecated"):       jen.Lit(l.Deprecated),
 		jen.Id("OSIApproved"):      jen.Lit(l.OSIApproved),
-	})
+	}
 }
