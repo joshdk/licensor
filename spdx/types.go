@@ -8,10 +8,6 @@ import (
 	"github.com/dave/jennifer/jen"
 )
 
-var (
-	licenses []License
-)
-
 type License struct {
 	Name             string   `json:"name"`
 	Identifier       string   `json:"licenseId"`
@@ -34,8 +30,4 @@ func (l *License) JenValue() *jen.Statement {
 		jen.Id("Deprecated"):       jen.Lit(l.Deprecated),
 		jen.Id("OSIApproved"):      jen.Lit(l.OSIApproved),
 	})
-}
-
-func All() []License {
-	return licenses
 }
