@@ -2,10 +2,10 @@
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE.txt file.
 
-package license
+package licensor
 
 import (
-	"github.com/joshdk/license/spdx"
+	"github.com/joshdk/licensor/spdx"
 )
 
 type Match struct {
