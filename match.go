@@ -7,6 +7,7 @@ package licensor
 import (
 	"bytes"
 	"regexp"
+	"sync"
 
 	"github.com/joshdk/licensor/spdx"
 )
@@ -15,28 +16,47 @@ var (
 	reWords = regexp.MustCompile(`[\w']+`)
 )
 
+// Best returns the license that is the closes match to the given text.
 func Best(unknown []byte) Match {
 
 	var (
 		unknownWords = wordSet(unknown)
-		bestMatch    *Match
+		matches      = make(chan Match)
+		wg           sync.WaitGroup
 	)
 
 	for _, license := range spdx.All() {
 
-		licenseWords := wordSet([]byte(license.Text))
+		wg.Add(1)
+		go func(license spdx.License) {
+			defer wg.Done()
 
-		confidence := dice(licenseWords, unknownWords)
+			licenseWords := wordSet([]byte(license.Text))
 
-		if bestMatch == nil || confidence > bestMatch.Confidence {
-			bestMatch = &Match{
+			confidence := dice(licenseWords, unknownWords)
+
+			matches <- Match{
 				Confidence: confidence,
 				License:    license,
 			}
+
+		}(license)
+	}
+
+	go func() {
+		wg.Wait()
+		close(matches)
+	}()
+
+	best := <-matches
+
+	for match := range matches {
+		if match.Confidence > best.Confidence {
+			best = match
 		}
 	}
 
-	return *bestMatch
+	return best
 }
 
 func dice(reference map[string]struct{}, target map[string]struct{}) float64 {
