@@ -16,8 +16,15 @@ var (
 	reWords = regexp.MustCompile(`[\w']+`)
 )
 
-// Best returns the license that is the closes match to the given text.
+// Best returns the license that is the closest match to the given text.
 func Best(unknown []byte) Match {
+	return Closest(unknown, 1.0)
+}
+
+// Closest returns the first license with a match confidence that exceeds
+// threshold, or the closest match to the given text if none meet the
+// threshold.
+func Closest(unknown []byte, threshold float64) Match {
 
 	var (
 		unknownWords = wordSet(unknown)
@@ -51,7 +58,10 @@ func Best(unknown []byte) Match {
 	best := <-matches
 
 	for match := range matches {
-		if match.Confidence > best.Confidence {
+		switch {
+		case best.Confidence >= threshold:
+			return best
+		case match.Confidence > best.Confidence:
 			best = match
 		}
 	}
