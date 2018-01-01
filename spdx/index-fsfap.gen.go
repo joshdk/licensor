@@ -9,8 +9,8 @@ func init() {
 		Name:             "FSF All Permissive License",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.  This file is offered as-is, without any warranty.",
-		Text:             "Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.  This file is offered as-is, without any warranty.",
+		StandardTemplate: "Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. This file is offered as-is, without any warranty.",
+		Text:             "Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. This file is offered as-is, without any warranty.",
 		URIs:             []string{"http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html"},
 	})
 }

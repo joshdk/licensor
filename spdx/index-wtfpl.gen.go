@@ -9,8 +9,8 @@ func init() {
 		Name:             "Do What The F*ck You Want To Public License",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nVersion 2, December 2004\n\nCopyright (C) 2004 Sam Hocevar <sam@hocevar.net>\n\nEveryone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.\n\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n  0. You just DO WHAT THE FUCK YOU WANT TO.",
-		Text:             "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nVersion 2, December 2004\n\nCopyright (C) 2004 Sam Hocevar <sam@hocevar.net>\n\nEveryone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.\n\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n  0. You just DO WHAT THE FUCK YOU WANT TO.",
+		StandardTemplate: "<<beginOptional>> DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nVersion 2, December 2004<<endOptional>>\nCopyright (C) 2004 Sam Hocevar <sam@hocevar.net>\nEveryone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n   <<var;name=\"bullet\";original=\"0.\";match=\".{0,20}\">> You just DO WHAT THE FUCK YOU WANT TO.",
+		Text:             "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nVersion 2, December 2004\nCopyright (C) 2004 Sam Hocevar <sam@hocevar.net>\nEveryone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n   0. You just DO WHAT THE FUCK YOU WANT TO.",
 		URIs:             []string{"http://sam.zoy.org/wtfpl/COPYING"},
 	})
 }

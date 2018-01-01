@@ -9,8 +9,8 @@ func init() {
 		Name:             "Dotseqn License",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "Copyright (C) 1995 by Donald Arseneau\n\nThis file may be freely transmitted and reproduced, but it may not be changed unless the name is changed also (except that you may freely change the paper-size option for \\documentclass).\n\nThis notice must be left intact.",
-		Text:             "Copyright (C) 1995 by Donald Arseneau\n\nThis file may be freely transmitted and reproduced, but it may not be changed unless the name is changed also (except that you may freely change the paper-size option for \\documentclass).\n\nThis notice must be left intact.",
+		StandardTemplate: "Copyright (C) 1995 by Donald Arseneau\nThis file may be freely transmitted and reproduced, but it may not be changed unless the name is changed also (except that you may freely change the paper-size option for \\documentclass).\nThis notice must be left intact.",
+		Text:             "Copyright (C) 1995 by Donald Arseneau\nThis file may be freely transmitted and reproduced, but it may not be changed unless the name is changed also (except that you may freely change the paper-size option for \\documentclass).\nThis notice must be left intact.",
 		URIs:             []string{"https://fedoraproject.org/wiki/Licensing/Dotseqn"},
 	})
 }
