@@ -9,8 +9,8 @@ func init() {
 		Name:             "No Limit Public License",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "NO LIMIT PUBLIC LICENSE\n     Version 0, June 2012\n\nGilles LAMIRAL\nLa Billais\n35580 Baulon\nFrance\n\nNO LIMIT PUBLIC LICENSE\n\nTerms and conditions for copying, distribution, modification\nor anything else.\n\n     0. No limit to do anything with this work and this license.",
-		Text:             "NO LIMIT PUBLIC LICENSE\n     Version 0, June 2012\n\nGilles LAMIRAL\nLa Billais\n35580 Baulon\nFrance\n\nNO LIMIT PUBLIC LICENSE\n\nTerms and conditions for copying, distribution, modification\nor anything else.\n\n     0. No limit to do anything with this work and this license.",
+		StandardTemplate: "<<beginOptional>> NO LIMIT PUBLIC LICENSE\nVersion 0, June 2012<<endOptional>><<beginOptional>> Gilles LAMIRAL\nLa Billais\n35580 Baulon\nFrance<<endOptional>><<beginOptional>> NO LIMIT PUBLIC LICENSE<<endOptional>>\nTerms and conditions for copying, distribution, modification or anything else.\n   <<var;name=\"bullet\";original=\"0.\";match=\".{0,20}\">> No limit to do anything with this work and this license.",
+		Text:             "NO LIMIT PUBLIC LICENSE\nVersion 0, June 2012 Gilles LAMIRAL\nLa Billais\n35580 Baulon\nFrance NO LIMIT PUBLIC LICENSE\nTerms and conditions for copying, distribution, modification or anything else.\n   0. No limit to do anything with this work and this license.",
 		URIs:             []string{"https://fedoraproject.org/wiki/Licensing/NLPL"},
 	})
 }

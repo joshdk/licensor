@@ -9,8 +9,8 @@ func init() {
 		Name:             "diffmark license",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "1. you can do what you want with it\n2. I refuse any responsibility for the consequences",
-		Text:             "1. you can do what you want with it\n2. I refuse any responsibility for the consequences",
+		StandardTemplate: "\n   <<var;name=\"bullet\";original=\"1.\";match=\".{0,20}\">> you can do what you want with it\n   <<var;name=\"bullet\";original=\"2.\";match=\".{0,20}\">> I refuse any responsibility for the consequences",
+		Text:             "\n   1. you can do what you want with it\n   2. I refuse any responsibility for the consequences",
 		URIs:             []string{"https://fedoraproject.org/wiki/Licensing/diffmark"},
 	})
 }

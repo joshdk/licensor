@@ -9,8 +9,8 @@ func init() {
 		Name:             "FSF Unlimited License (with License Retention)",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "Copyright 1996-2006 Free Software Foundation, Inc.\n\nThis file is free software; the Free Software Foundation gives unlimited permission to copy and/or distribute it, with or without modifications, as long as this notice is preserved.",
-		Text:             "Copyright 1996-2006 Free Software Foundation, Inc.\n\nThis file is free software; the Free Software Foundation gives unlimited permission to copy and/or distribute it, with or without modifications, as long as this notice is preserved.",
+		StandardTemplate: "Copyright 1996-2006 Free Software Foundation, Inc.\nThis file is free software; the Free Software Foundation gives unlimited permission to copy and/or distribute it, with or without modifications, as long as this notice is preserved.",
+		Text:             "Copyright 1996-2006 Free Software Foundation, Inc.\nThis file is free software; the Free Software Foundation gives unlimited permission to copy and/or distribute it, with or without modifications, as long as this notice is preserved.",
 		URIs:             []string{"https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License#License_Retention_Variant"},
 	})
 }

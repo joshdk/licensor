@@ -9,8 +9,8 @@ func init() {
 		Name:             "Fair License",
 		OSIApproved:      true,
 		StandardHeader:   "",
-		StandardTemplate: "Fair License\n\n<Copyright Information>\n\nUsage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.\n\nDISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.\n\n[2004, Fair License: rhid.com/fair (this URL no longer works)]",
-		Text:             "Fair License\n\n<Copyright Information>\n\nUsage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.\n\nDISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.\n\n[2004, Fair License: rhid.com/fair (this URL no longer works)]",
-		URIs:             []string{"http://www.opensource.org/licenses/Fair"},
+		StandardTemplate: "<<beginOptional>> Fair License<<endOptional>>\n<Copyright Information>\nUsage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.\nDISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.",
+		Text:             "Fair License\n<Copyright Information>\nUsage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.\nDISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.",
+		URIs:             []string{"http://www.opensource.org/licenses/Fair", "http://fairlicense.org/"},
 	})
 }

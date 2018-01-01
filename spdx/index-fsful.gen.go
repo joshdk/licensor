@@ -9,8 +9,8 @@ func init() {
 		Name:             "FSF Unlimited License",
 		OSIApproved:      false,
 		StandardHeader:   "",
-		StandardTemplate: "Copyright (C) 1992-1996, 1998-2012 Free Software Foundation, Inc.\n\nThis configure script is free software; the Free Software Foundation gives unlimited permission to copy, distribute and modify it.",
-		Text:             "Copyright (C) 1992-1996, 1998-2012 Free Software Foundation, Inc.\n\nThis configure script is free software; the Free Software Foundation gives unlimited permission to copy, distribute and modify it.",
+		StandardTemplate: "Copyright (C) 1992-1996, 1998-2012 Free Software Foundation, Inc.\nThis configure script is free software; the Free Software Foundation gives unlimited permission to copy, distribute and modify it.",
+		Text:             "Copyright (C) 1992-1996, 1998-2012 Free Software Foundation, Inc.\nThis configure script is free software; the Free Software Foundation gives unlimited permission to copy, distribute and modify it.",
 		URIs:             []string{"https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License"},
 	})
 }
