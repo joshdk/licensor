@@ -4,10 +4,6 @@
 
 package spdx
 
-import (
-	"github.com/dave/jennifer/jen"
-)
-
 type License struct {
 	Name             string   `json:"name"`
 	Identifier       string   `json:"licenseId"`
@@ -17,17 +13,4 @@ type License struct {
 	StandardHeader   string   `json:"standardLicenseHeader"`
 	Deprecated       bool     `json:"isDeprecatedLicenseId"`
 	OSIApproved      bool     `json:"isOsiApproved"`
-}
-
-func (l *License) JenValue() jen.Dict {
-	return jen.Dict{
-		jen.Id("Name"):             jen.Lit(l.Name),
-		jen.Id("Identifier"):       jen.Lit(l.Identifier),
-		jen.Id("Text"):             jen.Lit(l.Text),
-		jen.Id("URIs"):             jen.Lit(l.URIs),
-		jen.Id("StandardTemplate"): jen.Lit(l.StandardTemplate),
-		jen.Id("StandardHeader"):   jen.Lit(l.StandardHeader),
-		jen.Id("Deprecated"):       jen.Lit(l.Deprecated),
-		jen.Id("OSIApproved"):      jen.Lit(l.OSIApproved),
-	}
 }
