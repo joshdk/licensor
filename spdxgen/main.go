@@ -141,13 +141,7 @@ func pkgDir(pkg string) (string, error) {
 	return filepath.Join(gopath, "src", pkg), nil
 }
 
-func generate(spdxDataPkg string, targetPkg string) error {
-
-	// Resolve SPDX license list data package to the correct directory
-	spdxDataPkgDir, err := pkgDir(spdxDataPkg)
-	if err != nil {
-		return err
-	}
+func generate(spdxDataDir string, targetPkg string) error {
 
 	// Resolve target package to the correct directory
 	targetPkgDir, err := pkgDir(targetPkg)
@@ -155,7 +149,7 @@ func generate(spdxDataPkg string, targetPkg string) error {
 		return err
 	}
 
-	licenses := parse(read(find(spdxDataPkgDir)))
+	licenses := parse(read(find(spdxDataDir)))
 
 	for license := range licenses {
 
@@ -184,11 +178,11 @@ func main() {
 		}
 
 		var (
-			spdxDataPkg = os.Args[1]
+			spdxDataDir = os.Args[1]
 			targetPkg   = os.Args[2]
 		)
 
-		return generate(spdxDataPkg, targetPkg)
+		return generate(spdxDataDir, targetPkg)
 	}()
 
 	if err != nil {
