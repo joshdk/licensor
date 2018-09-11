@@ -1,0 +1,7 @@
+[[constraint]]
+  name = "github.com/dave/jennifer"
+  version = "1.0.2"
+
+[prune]
+  go-tests = true
+  unused-packages = true
